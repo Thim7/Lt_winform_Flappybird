@@ -143,7 +143,7 @@ namespace WindowsFormsApp1
                 timer1.Enabled = false;
                 timer2.Enabled = false;
                 MessageBox.Show("\tGame Over !\n\n\tYour Score: " + point + "\n\n\t" + "Press Enter to Play again", "Inform");
-
+                
             }
             if (point >5)
             {

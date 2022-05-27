@@ -52,10 +52,28 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="HelpScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpScreen.Designer.cs">
+      <DependentUpon>HelpScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuGame.Designer.cs">
+      <DependentUpon>MenuGame.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpScreen.resx">
+      <DependentUpon>HelpScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuGame.resx">
+      <DependentUpon>MenuGame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -82,10 +100,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\down.png" />
+    <None Include="Wallpapers.jpg" />
     <None Include="Resources\up1.png" />
     <None Include="Resources\down1.png" />
     <Content Include="Resources\gameover.wav" />
     <Content Include="Resources\pointup.wav" />
+    <None Include="Resources\spacekey.jpg" />
     <Content Include="Resources\tap.wav" />
     <Content Include="Resources\up.png" />
   </ItemGroup>

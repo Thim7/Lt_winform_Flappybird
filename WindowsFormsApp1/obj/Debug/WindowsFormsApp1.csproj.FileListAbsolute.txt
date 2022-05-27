@@ -19,3 +19,5 @@ D:\HOC TAP\Lập trình Windows\Project\Project_2\Lt_winform_Flappybird\WindowsF
 D:\HOC TAP\Lập trình Windows\Project\Project_2\Lt_winform_Flappybird\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
 D:\HOC TAP\Lập trình Windows\Project\Project_2\Lt_winform_Flappybird\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 D:\HOC TAP\Lập trình Windows\Project\Project_2\Lt_winform_Flappybird\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+D:\HOC TAP\Lập trình Windows\Project\Project_2\Lt_winform_Flappybird\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MenuGame.resources
+D:\HOC TAP\Lập trình Windows\Project\Project_2\Lt_winform_Flappybird\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.HelpScreen.resources
