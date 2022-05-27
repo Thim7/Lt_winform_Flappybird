@@ -9,3 +9,13 @@ D:\Lap trinh window form\20110718_VoDuyTao\20110718_VoDuyTao_Bai2\20110718_VoDuy
 D:\Lap trinh window form\20110718_VoDuyTao\20110718_VoDuyTao_Bai2\20110718_VoDuyTao_Bai2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
 D:\Lap trinh window form\20110718_VoDuyTao\20110718_VoDuyTao_Bai2\20110718_VoDuyTao_Bai2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 D:\Lap trinh window form\20110718_VoDuyTao\20110718_VoDuyTao_Bai2\20110718_VoDuyTao_Bai2\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+D:\HOC TAP\Lập trình Windows\Project\Project_2\Lt_winform_Flappybird\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+D:\HOC TAP\Lập trình Windows\Project\Project_2\Lt_winform_Flappybird\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+D:\HOC TAP\Lập trình Windows\Project\Project_2\Lt_winform_Flappybird\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+D:\HOC TAP\Lập trình Windows\Project\Project_2\Lt_winform_Flappybird\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+D:\HOC TAP\Lập trình Windows\Project\Project_2\Lt_winform_Flappybird\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+D:\HOC TAP\Lập trình Windows\Project\Project_2\Lt_winform_Flappybird\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\HOC TAP\Lập trình Windows\Project\Project_2\Lt_winform_Flappybird\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+D:\HOC TAP\Lập trình Windows\Project\Project_2\Lt_winform_Flappybird\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+D:\HOC TAP\Lập trình Windows\Project\Project_2\Lt_winform_Flappybird\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+D:\HOC TAP\Lập trình Windows\Project\Project_2\Lt_winform_Flappybird\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb

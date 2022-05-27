@@ -13,9 +13,12 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
+       
         private Random random;
         private int point = 0;
-
+        private int gravity = 20;
+        private int pipeSpeed = 15;
+        
         public Form1()
         {
             InitializeComponent();
@@ -29,38 +32,39 @@ namespace WindowsFormsApp1
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            pictureBox1.Image = WindowsFormsApp1.Properties.Resources.down1;
-            pictureBox1.Top += 20;
+            FlappyBird.Image = WindowsFormsApp1.Properties.Resources.down1;
+            FlappyBird.Top += gravity;
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             if(e.KeyCode == Keys.Space && timer1.Enabled == true)
             {
-                pictureBox1.Top -= 30;
-                pictureBox1.Image = WindowsFormsApp1.Properties.Resources.up1;
+                FlappyBird.Top -= gravity;
+                FlappyBird.Image = WindowsFormsApp1.Properties.Resources.up1;
                 SoundPlayer sound = new SoundPlayer(WindowsFormsApp1.Properties.Resources.tap);
                 sound.Play();
             }
             if(e.KeyCode == Keys.Enter)
             {
-                pictureBox1.Location = new Point(115, 162);
-                pipe1.Location = new Point(359, 241);
-                pipe2.Location = new Point(559, 241);
-                pipe3.Location = new Point(759, 241);
+                FlappyBird.Location = new Point(115, 162);
+                
+                pipeBottom.Location = new Point(359, 241);
+                pipeBottom2.Location = new Point(559, 241);
+                pipeBottom3.Location = new Point(759, 241);
 
-                pipe4.Location = new Point(359, 0);
-                pipe5.Location = new Point(559, 0);
-                pipe6.Location = new Point(759, 0);
+                pipeTop.Location = new Point(359, 0);
+                pipeTop2.Location = new Point(559, 0);
+                pipeTop3.Location = new Point(759, 0);
 
-                pipe1.Height = 140;
-                pipe2.Height = 140;
-                pipe3.Height = 140;
-                pipe4.Height = 141;
-                pipe5.Height = 141;
-                pipe6.Height = 141;
-
+                pipeBottom.Height = 140;
+                pipeTop.Height = 140;
+                pipeBottom2.Height = 140;
+                pipeTop2.Height = 140;
+                pipeBottom3.Height = 141;
+                pipeTop3.Height = 141;
                 this.Invalidate();
+                
                 point = 0;
                 timer1.Enabled = true;
                 timer2.Enabled = true;
@@ -69,69 +73,92 @@ namespace WindowsFormsApp1
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            pipe1.Left -= 20;
-            if (pipe1.Right <= 0)
+
+            pipeBottom.Left -= pipeSpeed;
+            if (pipeBottom.Left <= 0)
             {
-                pipe1.Height = random.Next(5, 20) * 10;
+                pipeBottom.Height = random.Next(5, 20) * 10;
                 this.Invalidate();
-                pipe1.Location = new Point(510, 225 + (140 - pipe1.Height));
+                pipeBottom.Location = new Point(559, 225 + (140 - pipeBottom.Height));
                 point++;
                 SoundPlayer sound = new SoundPlayer(WindowsFormsApp1.Properties.Resources.pointup);
                 sound.Play();
             }
-            pipe2.Left -= 20;
-            if (pipe2.Right <= 0)
+
+            pipeBottom2.Left -= pipeSpeed;
+            if (pipeBottom2.Left <= 0)
             {
-                pipe2.Height = random.Next(4, 20) * 10;
+                pipeBottom2.Height = random.Next(5, 20) * 10;
                 this.Invalidate();
-                pipe2.Location = new Point(510, 225 + (140 - pipe2.Height));
+                pipeBottom2.Location = new Point(559, 225 + (140 - pipeBottom2.Height));
                 point++;
                 SoundPlayer sound = new SoundPlayer(WindowsFormsApp1.Properties.Resources.pointup);
                 sound.Play();
             }
-            pipe3.Left -= 20;
-            if (pipe3.Right <= 0)
+
+            pipeBottom3.Left -= pipeSpeed;
+            if (pipeBottom3.Left <= 0)
             {
-                pipe3.Height = random.Next(5, 20) * 10;
+                pipeBottom3.Height = random.Next(5, 20) * 10;
                 this.Invalidate();
-                pipe3.Location = new Point(510, 225 + (140 - pipe3.Height));
+                pipeBottom3.Location = new Point(559, 225 + (140 - pipeBottom3.Height));
                 point++;
                 SoundPlayer sound = new SoundPlayer(WindowsFormsApp1.Properties.Resources.pointup);
                 sound.Play();
             }
-            pipe4.Left -= 20;
-            if (pipe4.Right <= 0)
+
+            pipeTop.Left -= pipeSpeed;
+            if (pipeTop.Left <= 0)
             {
-                pipe4.Height = 281 - pipe1.Height;
+                pipeTop.Height = 281 - pipeBottom.Height;
                 this.Invalidate();
-                pipe4.Location = new Point(510, 0);
+                pipeTop.Location = new Point(559, 0);
             }
-            pipe5.Left -= 20;
-            if (pipe5.Right <= 0)
+
+            pipeTop2.Left -= pipeSpeed;
+            if (pipeTop2.Left <= 0)
             {
-                pipe5.Height = 281 - pipe2.Height;
+                pipeTop2.Height = 281 - pipeBottom2.Height;
                 this.Invalidate();
-                pipe5.Location = new Point(510, 0);
+                pipeTop2.Location = new Point(559, 0);
             }
-            pipe6.Left -= 20;
-            if (pipe6.Right <= 0)
+
+            pipeTop3.Left -= pipeSpeed;
+            if (pipeTop3.Left <= 0)
             {
-                pipe6.Height = 281 - pipe3.Height;
+                pipeTop3.Height = 281 - pipeBottom3.Height;
                 this.Invalidate();
-                pipe6.Location = new Point(510, 0);
+                pipeTop3.Location = new Point(559, 0);
             }
-            label1.Text = point.ToString();
-            if (pipe1.Bounds.IntersectsWith(pictureBox1.Bounds) || pipe2.Bounds.IntersectsWith(pictureBox1.Bounds) || pipe3.Bounds.IntersectsWith(pictureBox1.Bounds) ||
-                pipe4.Bounds.IntersectsWith(pictureBox1.Bounds) || pipe5.Bounds.IntersectsWith(pictureBox1.Bounds) ||
-                pipe6.Bounds.IntersectsWith(pictureBox1.Bounds))
+
+            pointText.Text = "Point: "+ point.ToString();
+            
+            if (pipeBottom.Bounds.IntersectsWith(FlappyBird.Bounds) || pipeTop.Bounds.IntersectsWith(FlappyBird.Bounds) 
+                || pipeBottom2.Bounds.IntersectsWith(FlappyBird.Bounds) || pipeTop2.Bounds.IntersectsWith(FlappyBird.Bounds)
+                || pipeBottom3.Bounds.IntersectsWith(FlappyBird.Bounds) || pipeTop3.Bounds.IntersectsWith(FlappyBird.Bounds)
+                || FlappyBird.Top < -25 || FlappyBird.Bottom >500)
             {
                 SoundPlayer sound = new SoundPlayer(WindowsFormsApp1.Properties.Resources.gameover);
                 sound.Play();
                 timer1.Enabled = false;
                 timer2.Enabled = false;
-                MessageBox.Show("Game Over !\n Your Score: " + point + "\n" + "Press Enter to continue");
+                MessageBox.Show("\tGame Over !\n\n\tYour Score: " + point + "\n\n\t" + "Press Enter to Play again", "Inform");
 
             }
+            if (point >5)
+            {
+                pipeSpeed = 20;
+            }
+            if (point > 10)
+            {
+                pipeSpeed = 22;
+            }
+            if (point > 15)
+            {
+                pipeSpeed = 25;
+            }
         }
+
+        
     }
 }
